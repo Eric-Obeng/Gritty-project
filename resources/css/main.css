@@ -5,6 +5,11 @@ html {
     font-family: "Arial", sans-serif;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: #F2F2F2
 }
@@ -51,7 +56,7 @@ strong {
 .header a {
     display: block;
     color: #4A4A4A;
-    padding: 30px 20px;
+    padding: 20px 30px;
 }
 
 a.home {
@@ -106,7 +111,9 @@ a.home {
 .gritter-card {
     background-color: #ffffff;
     margin: 50px 0;
-    padding: 20px 50px;
+    padding: 20px 30px;
+    width: 100vw;
+
 }
 
 .gritter-card .subheader {
@@ -154,13 +161,93 @@ a.home {
     font-style: italic;
 }
 
-@media only screen and (max-width: 535px) {
-    .header {
+@media screen and (max-width: 767px) {
+    .topnav {
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #4C4C4C;
+        padding: 14px 16px;
+        font-size: 17px;
+        text-decoration: none;
+    }
+
+    .topnav a:hover {
+        color: #4D00FF;
+    }
+
+    .topnav a:active {
+        color: #4D00FF;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+    /* .header {
         font-size: 15px;
     }
 
     .header a {
-        padding: 10px 10px 10px 0px;
+        padding: 10px 30px;
+    }
+
+    .header li {
+        display: inline-block;
+    }
+    
+    .header a {
+        display: block;
+        color: #4A4A4A;
+        padding: 10px 5px;
+    } */
+    
+    a.home {
+        color: #4D00FF;
+    }
+    
+    .banner #small-gritty {
+        height: 100px;
+        width: 100px;
+        -webkit-filter: drop-shadow(0);
+        filter: drop-shadow(0);
+    }
+
+    .gritter {
+        color: #4D00FF;
+        font-size: 80px;
+        align-items: center;
+    }
+
+    .gritter-card p {
+        font-size: 15px;
+        line-height: 1.5;
+        display: inline-block;
+        overflow: scroll;    }
+}
+
+@media screen and (min-width: 480px) {
+    .banner #small-gritty {
+        height: 100px;
+        width: 100px;
+    }
+
+    .header {
+        font-family: "Arial",sans-serif;
+        font-size: 18px;
+        line-height: 1.2;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .gritter {
+        color: #4D00FF;
+        font-size: 80px;
     }
     
 }
